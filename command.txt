@@ -13,3 +13,9 @@ elm install elm/http
 
 #05
 elm install elm/json
+
+#06
+elm install elm/file
+elm install elm/parser
+elm install elm/random
+elm install elm/project-metadata-utils
