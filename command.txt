@@ -23,3 +23,7 @@ elm install elm/project-metadata-utils
 #07
 elm install elm/svg
 elm install elm/regex
+
+#08
+elm make src/Main.elm
+elm make src/Main.elm --optimize --output=elm.js
