@@ -27,3 +27,6 @@ elm install elm/regex
 #08
 elm make src/Main.elm
 elm make src/Main.elm --optimize --output=elm.js
+
+#09
+elm install rtfeldman/elm-css
