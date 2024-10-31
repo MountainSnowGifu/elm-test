@@ -9,6 +9,12 @@ module Main exposing (..)
 import Browser
 import Html exposing (Html, button, div, text)
 import Html.Events exposing (onClick)
+import Random
+
+
+probability : Random.Generator Float
+probability =
+    Random.float 0 1
 
 
 
@@ -58,7 +64,7 @@ update msg model =
 view : Model -> Html Msg
 view model =
     div []
-        [ button [ onClick Decrement ] [ text " -- " ]
+        [ button [ onClick Decrement ] [ text " --- " ]
         , div [] [ text (String.fromInt model) ]
-        , button [ onClick Increment ] [ text " ++ " ]
+        , button [ onClick Increment ] [ text " +++ " ]
         ]
