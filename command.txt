@@ -10,3 +10,6 @@ elm make src/Main.elm --optimize --output=elm.jsgit
 
 #04
 elm install elm/http
+
+#05
+elm install elm/json
