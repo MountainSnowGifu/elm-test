@@ -19,3 +19,7 @@ elm install elm/file
 elm install elm/parser
 elm install elm/random
 elm install elm/project-metadata-utils
+
+#07
+elm install elm/svg
+elm install elm/regex
