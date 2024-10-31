@@ -3,3 +3,7 @@ git init
 
 #02
 elm reactor
+
+#03
+elm make src/Main.elm
+elm make src/Main.elm --optimize --output=elm.js
