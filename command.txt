@@ -30,3 +30,5 @@ elm make src/Main.elm --optimize --output=elm.js
 
 #09
 elm install rtfeldman/elm-css
+
+C:\Users\oasis\AppData\Roaming\elm\0.19.1\packages

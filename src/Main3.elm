@@ -1,10 +1,20 @@
-module Main2 exposing (floatingLabel)
+module Main3 exposing (..)
 
+-- Press buttons to increment and decrement a counter.
+--
+-- Read how it works:
+--   https://guide.elm-lang.org/architecture/buttons.html
+--
+
+import Browser
 import Css
 import Css.Global
 import Css.Transitions exposing (transition)
+import Html exposing (Html, button, div, text)
+import Html.Events exposing (onClick)
 import Html.Styled as HtmlStyled exposing (Html)
 import Html.Styled.Attributes as HtmlStyledAttributes
+import Random
 
 
 floatingLabel : Html msg
@@ -46,4 +56,62 @@ floatingLabel =
                 ]
             ]
             [ HtmlStyled.text "Placeholder" ]
+        ]
+
+
+probability : Random.Generator Float
+probability =
+    Random.float 0 1
+
+
+
+-- MAIN
+
+
+main =
+    Browser.sandbox { init = init, update = update, view = view }
+
+
+
+-- MODEL
+
+
+type alias Model =
+    Int
+
+
+init : Model
+init =
+    0
+
+
+
+-- UPDATE
+
+
+type Msg
+    = Increment
+    | Decrement
+
+
+update : Msg -> Model -> Model
+update msg model =
+    case msg of
+        Increment ->
+            model + 1
+
+        Decrement ->
+            model - 1
+
+
+
+-- VIEW
+
+
+view : Model -> Html Msg
+view model =
+    div []
+        [ button [ onClick Decrement ] [ text " --- " ]
+        , div [] [ text (String.fromInt model) ]
+        , button [ onClick Increment ] [ text " +++ " ]
         ]
