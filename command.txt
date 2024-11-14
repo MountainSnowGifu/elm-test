@@ -32,3 +32,10 @@ elm make src/Main.elm --optimize --output=elm.js
 elm install rtfeldman/elm-css
 
 C:\Users\oasis\AppData\Roaming\elm\0.19.1\packages
+
+#10
+elm install mdgriffith/elm-ui
+
+#11
+elm install elm/file
+elm install krisajenkins/remotedata
